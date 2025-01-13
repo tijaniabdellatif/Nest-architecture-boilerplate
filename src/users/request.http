@@ -1,0 +1,32 @@
+
+### Sign up a user 
+
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "email":"tijani.idrissi@gmail.com",
+    "password":"23038"
+}
+
+### Find a user by ID : 
+
+GET http://localhost:3000/auth/1
+
+
+### find by email
+GET http://localhost:3000/auth?email=tijani.idrissi.abdellatif@gmail.com
+
+### Delete a user 
+
+DELETE  http://localhost:3000/auth/2
+
+
+### update a user 
+PATCH http://localhost:3000/auth/1
+Content-Type: application/json
+
+{
+    "email":"tijani.idrissi.abdellatif@gmail.com",
+    "password":"forwardtypeman"
+}
