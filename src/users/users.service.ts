@@ -15,6 +15,10 @@ export class UsersService {
   }
 
   findOne(id: number) {
+    if(!id){
+       console.log('no user');
+      return null;
+    }
     return this.repo.findOneBy({ id });
   }
 

@@ -1,16 +1,24 @@
 
 ### Sign up a user 
-
 POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-    "email":"tijani.idrissi@gmail.com",
+    "email":"abdellatif@gmail.com",
     "password":"23038"
 }
 
-### Find a user by ID : 
+### Sign in a user 
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
 
+{
+    "email":"abdellatif@gmail.com",
+    "password":"23038"
+}
+
+
+### Find a user by ID : 
 GET http://localhost:3000/auth/1
 
 
@@ -18,7 +26,6 @@ GET http://localhost:3000/auth/1
 GET http://localhost:3000/auth?email=tijani.idrissi.abdellatif@gmail.com
 
 ### Delete a user 
-
 DELETE  http://localhost:3000/auth/2
 
 
@@ -28,5 +35,21 @@ Content-Type: application/json
 
 {
     "email":"tijani.idrissi.abdellatif@gmail.com",
-    "password":"forwardtypeman"
+    "password":"fortyfour"
 }
+
+
+### Set a color 
+GET http://localhost:3000/auth/colors/red 
+
+
+### Get the color 
+GET http://localhost:3000/auth/colors
+
+
+### Who ami  get the current signed in user
+GET http://localhost:3000/auth/whoami
+
+
+### Sign out the current signed user 
+POST http://localhost:3000/auth/signout
