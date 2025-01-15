@@ -34,14 +34,10 @@ export class UsersController {
  
   @Get('whoami')
   @UseGuards(AuthGuard)
-  whoAmI(@CurrentUser() user: UserEntity) {
-    return user;
-  }
+  whoAmI(@CurrentUser() user: UserEntity) {return user;}
 
   @Post('/signout')
-  signOut(@Session() session: any) {
-    session.userId = null;
-  }
+  signOut(@Session() session: any) {session.userId = null;}
 
   @Post('/signin')
   async signin(@Body() body: CreateUserDTO, @Session() session: any) {
