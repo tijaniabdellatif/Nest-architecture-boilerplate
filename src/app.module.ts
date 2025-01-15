@@ -36,7 +36,7 @@ export class AppModule {
 
       consumer.apply( cookieSession({
         keys: ['encryption_key'],
-      }))
+      })).forRoutes('*')
 
   }
 }
